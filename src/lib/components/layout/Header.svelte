@@ -16,7 +16,7 @@
 			class="flex gap-4 px-0 h-full items-center font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary"
 			href="https://github.com/sveltejs/kit"
 			target="_blank"
-			aria-label="GitHub"
+			aria-label="Things - Todo App"
 		>
 			<enhanced:img src={appIcon} alt="Things - Todo App Logo" class="w-9 h-9" />
 			<p class="mt-1 hidden md:block text-base">Things</p>
@@ -35,8 +35,8 @@
 						? 'page'
 						: undefined}
 				>
-					<a class="anchor anchor-text" {href}>{label}</a>
-					<a class="anchor anchor-icon" {href}><Iconify {icon} /></a>
+					<a class="anchor anchor-text" {href} aria-label={label}>{label}</a>
+					<a class="anchor anchor-icon" {href} aria-label={label}><Iconify {icon} /></a>
 				</li>
 			{/each}
 		</ul>
@@ -50,7 +50,7 @@
 			class="flex anchor gap-4"
 			href="https://github.com/sveltejs/kit"
 			target="_blank"
-			aria-label="GitHub"
+			aria-label="Source Code"
 		>
 			<p class="mt-1 hidden md:block text-base">Source</p>
 			<Iconify class="text-3xl bg-white rounded-full" icon="github" />
