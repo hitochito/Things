@@ -1,19 +1,6 @@
 <script lang="ts">
+	import { icons, type IconName } from '$lib/types/iconTypes';
 	import 'iconify-icon';
-
-	const icons = {
-		moon: 'lucide:moon',
-		sun: 'lucide:sun',
-		x: 'lucide:x',
-		menu: 'lucide:menu',
-		svelte: 'logos:svelte-icon',
-		github: 'logos:github-icon',
-		smile: 'twemoji:grinning-face-with-smiling-eyes',
-		rocket: 'ic:round-rocket-launch',
-		book: 'clarity:book-solid'
-		// Add more icons here as needed
-	} as const;
-	type IconName = keyof typeof icons;
 
 	export let icon: IconName;
 	export let color = 'currentColor';

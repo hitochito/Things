@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
-	import Iconify from '$lib/components/icons/Iconify.svelte';
+	import { Iconify } from '$lib/components';
+	import { icons, type IconName } from '$lib/types/iconTypes';
 
-	const navItems = [
-		{ href: '/', label: 'Home' },
-		{ href: '/about', label: 'About' },
-		{ href: '/sverdle', label: 'Sverdle' }
+	const navItems: Array<{ href: string; label: string; icon: IconName }> = [
+		{ href: '/', label: 'Home', icon: 'home' },
+		{ href: '/about', label: 'About', icon: 'about' }
 	];
 </script>
 
@@ -21,14 +21,15 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			{#each navItems as { href, label }}
+			{#each navItems as { href, label, icon }}
 				<li
 					aria-current={$page.url.pathname === href ||
 					($page.url.pathname.startsWith(href) && href !== '/')
 						? 'page'
 						: undefined}
 				>
-					<a {href}>{label}</a>
+					<a class="anchor anchor-text" {href}>{label}</a>
+					<a class="anchor anchor-icon" {href}><Iconify {icon} /></a>
 				</li>
 			{/each}
 		</ul>
@@ -81,7 +82,13 @@
 		@apply content-[''] w-0 h-0 absolute top-0 left-[calc(50%-6px)] border-[6px] border-solid border-transparent border-t-primary;
 	}
 
-	nav a {
-		@apply flex h-full items-center px-2 font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary;
+	.anchor {
+		@apply h-full items-center px-2 font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary;
+	}
+	.anchor-text {
+		@apply hidden md:flex;
+	}
+	.anchor-icon {
+		@apply flex md:hidden text-2xl;
 	}
 </style>
