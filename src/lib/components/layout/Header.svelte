@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { Iconify } from '$lib/components';
-	import { icons, type IconName } from '$lib/types/iconTypes';
+	import { type IconName } from '$lib/types/iconTypes';
+	import appIcon from '$lib/assets/images/icon.png?enhanced';
 
 	const navItems: Array<{ href: string; label: string; icon: IconName }> = [
 		{ href: '/', label: 'Home', icon: 'home' },
@@ -11,8 +12,14 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev" aria-label="SvelteKit" target="_blank">
-			<Iconify class="text-3xl" icon="svelte" />
+		<a
+			class="flex gap-4 px-0 h-full items-center font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary"
+			href="https://github.com/sveltejs/kit"
+			target="_blank"
+			aria-label="GitHub"
+		>
+			<enhanced:img src={appIcon} alt="Things - Todo App Logo" class="w-9 h-9" />
+			<p class="mt-1 hidden md:block text-base">Things</p>
 		</a>
 	</div>
 
@@ -39,7 +46,13 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit" target="_blank" aria-label="GitHub">
+		<a
+			class="flex anchor gap-4"
+			href="https://github.com/sveltejs/kit"
+			target="_blank"
+			aria-label="GitHub"
+		>
+			<p class="mt-1 hidden md:block text-base">Source</p>
 			<Iconify class="text-3xl bg-white rounded-full" icon="github" />
 		</a>
 	</div>
@@ -51,7 +64,7 @@
 	}
 
 	.corner {
-		@apply px-3;
+		@apply px-1 md:px-3 md:py-2;
 	}
 
 	.corner a {
