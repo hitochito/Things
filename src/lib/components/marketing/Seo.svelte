@@ -2,10 +2,10 @@
 	import { images } from '$lib/assets';
 	import { CldOgImage } from 'svelte-cloudinary';
 
-	export let title = 'PocketKit - A SvelteKit x PocketBase starter kit';
+	export let title = 'Things - Get Things Done: Your Ultimate Procrastination Tool';
 	export let description =
-		'A SvelteKit x PocketBase starter kit for rapid web application development';
-	export let src = images.ogImageHome;
+		'Discover the ultimate procrastination tool with Things, built using Svelte 5 and service workers. Features include a todo list with add, complete, and delete options, plus optional drag-and-drop reordering and offline functionality. Perfect for managing tasks you will never actually do!';
+	export let src = images.ogImageThings;
 	export let height = 630;
 	export let width = 1200;
 </script>
