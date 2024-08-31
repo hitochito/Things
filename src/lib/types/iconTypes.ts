@@ -10,7 +10,8 @@ export const icons = {
 	book: 'clarity:book-solid',
 	home: 'typcn:home',
 	about: 'typcn:info',
-	delete: 'fa6-solid:trash'
+	delete: 'fa6-solid:trash',
+	plus: 'fa6-solid:plus'
 	// Add more icons here as needed
 } as const;
 
