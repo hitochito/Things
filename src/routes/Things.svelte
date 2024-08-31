@@ -61,12 +61,12 @@
 
 	<div class="lists-container">
 		{#each ['To Do', 'Completed'] as listType}
-			<h2>{listType}</h2>
 			<ul
 				class="todo-list"
 				on:dragover|preventDefault
 				on:drop={(e) => handleDrop(e, listType === 'Completed')}
 			>
+				<li class="font-bold">{listType}</li>
 				{#each todos.filter((t) => t.completed === (listType === 'Completed')) as todo (todo.id)}
 					<li
 						transition:slide
