@@ -1,7 +1,7 @@
 <footer>
 	<p>
-		To Learn Svelte Together, Join The <a target="_blank" href="https://discord.gg/CUyXsHyFzD"
-			>Discord Server</a
+		To Learn Svelte Together, Join <a target="_blank" href="https://discord.gg/CUyXsHyFzD"
+			>Discord</a
 		>
 	</p>
 </footer>
