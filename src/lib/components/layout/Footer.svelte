@@ -1,15 +1,17 @@
 <footer>
 	<p>
-		visit <a target="_blank" href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
+		To Learn Svelte Together, Join The <a target="_blank" href="https://discord.gg/CUyXsHyFzD"
+			>Discord Server</a
+		>
 	</p>
 </footer>
 
 <style lang="postcss">
 	footer {
-		@apply flex flex-col justify-center items-center p-2;
+		@apply flex flex-col items-center justify-center p-2;
 	}
 
 	footer a {
-		@apply font-bold underline text-primary;
+		@apply font-bold text-primary underline;
 	}
 </style>
