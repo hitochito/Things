@@ -9,7 +9,8 @@ export const icons = {
 	rocket: 'ic:round-rocket-launch',
 	book: 'clarity:book-solid',
 	home: 'typcn:home',
-	about: 'typcn:info'
+	about: 'typcn:info',
+	delete: 'fa6-solid:trash'
 	// Add more icons here as needed
 } as const;
 
