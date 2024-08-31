@@ -9,8 +9,8 @@
 		completed: boolean;
 	}
 
-	let todos: Todo[] = [];
-	let newTodoText = '';
+	let todos = $state<Todo[]>([]);
+	let newTodoText = $state('');
 
 	onMount(() => {
 		const storedTodos = localStorage.getItem('todos');
@@ -19,11 +19,11 @@
 		}
 	});
 
-	$: {
+	$effect(() => {
 		if (todos.length > 0) {
 			localStorage.setItem('todos', JSON.stringify(todos));
 		}
-	}
+	});
 
 	function addTodo() {
 		if (newTodoText.trim()) {

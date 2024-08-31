@@ -14,11 +14,11 @@
 		showSpinner: false
 	});
 
-	$: {
+	$effect(() => {
 		if ($navigating) {
 			NProgress.start();
 		} else NProgress.done();
-	}
+	});
 </script>
 
 <ModeWatcher />
@@ -37,10 +37,10 @@
 
 <style lang="postcss">
 	.app {
-		@apply min-h-screen flex flex-col;
+		@apply flex min-h-screen flex-col;
 	}
 
 	main {
-		@apply flex flex-1 flex-col p-5 w-full max-w-4xl mx-auto;
+		@apply mx-auto flex w-full max-w-4xl flex-1 flex-col p-5;
 	}
 </style>
