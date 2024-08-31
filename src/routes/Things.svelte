@@ -54,19 +54,19 @@
 <main>
 	<form on:submit|preventDefault={addTodo}>
 		<Input bind:value={newTodoText} placeholder="Add a New Thing To Do" />
-		<Button type="submit" size="icon">
+		<Button aria-label="Add a New Thing To Do" type="submit" size="icon">
 			<Iconify class="ml-1 text-lg" icon="plus" />
 		</Button>
 	</form>
 
 	<div class="lists-container">
 		{#each ['To Do', 'Completed'] as listType}
+			<h2>{listType}</h2>
 			<ul
 				class="todo-list"
 				on:dragover|preventDefault
 				on:drop={(e) => handleDrop(e, listType === 'Completed')}
 			>
-				<h2>{listType}</h2>
 				{#each todos.filter((t) => t.completed === (listType === 'Completed')) as todo (todo.id)}
 					<li
 						transition:slide
