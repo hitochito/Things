@@ -4,13 +4,13 @@ Introducing the revolutionary new to-do app that’s going to totally change you
 
 ## Features (Work In Progress)
 
-- [ ] Add tasks
-- [ ] Forget them
+- [x] Add tasks
+- [x] Forget them
 - [ ] Works Offline
-- [ ] Feel productive
-- [ ] No Account Needed
-- [ ] Mark them as completed
-- [ ] Your data is locally saved
+- [x] Feel productive
+- [x] No Account Needed
+- [x] Mark them as completed
+- [x] Your data is locally saved
 - [x] Don't actually do anything
 
 That's it! Enjoy the sweet satisfaction of using yet another todo app that’s sure to change your life — just like the last five did!
