@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import { Button, Iconify } from '$lib/components';
+	import { Button, Iconify, Input } from '$lib/components';
 
 	interface Todo {
 		id: number;
@@ -52,11 +52,11 @@
 </script>
 
 <main>
-	<h1>Todo List</h1>
-
 	<form on:submit|preventDefault={addTodo}>
-		<input bind:value={newTodoText} placeholder="Add a new todo" />
-		<button type="submit">Add</button>
+		<Input bind:value={newTodoText} placeholder="Add a New Thing To Do" />
+		<Button type="submit" size="icon">
+			<Iconify class="ml-1 text-lg" icon="plus" />
+		</Button>
 	</form>
 
 	<div class="lists-container">
@@ -92,22 +92,28 @@
 </main>
 
 <style lang="postcss">
+	form {
+		@apply mb-2 flex items-center justify-center gap-4;
+	}
 	.lists-container {
-		@apply flex justify-between gap-4;
+		@apply flex flex-col justify-between gap-4 sm:mr-4 sm:flex-row;
+		user-select: none;
 	}
 
 	.todo-list {
+		scrollbar-width: none;
 		border: 1px solid #ccc;
-		@apply min-h-[80vh] min-w-[50%] p-4 space-y-2;
+		@apply rounded-md border-2 border-muted;
+		@apply h-[70vh] min-w-[50%] space-y-2 overflow-y-scroll p-4;
 	}
 
 	.todo-item {
-		@apply bg-muted py-2 pl-4 rounded;
-		@apply break-all flex justify-between gap-4 items-center;
+		@apply cursor-pointer rounded-md bg-muted py-2 pl-4;
+		@apply flex items-center justify-between gap-4 break-all;
 	}
 
 	.completed {
-		text-decoration: line-through;
 		opacity: 0.6;
+		text-decoration: line-through;
 	}
 </style>
