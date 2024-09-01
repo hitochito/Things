@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { Seo } from '$lib/components';
+	import { Seo, LoadingSpinner } from '$lib/components';
 	import Things from './Things.svelte';
 </script>
 
-<Things />
+<LoadingSpinner>
+	<Things />
+</LoadingSpinner>
 
 <Seo />

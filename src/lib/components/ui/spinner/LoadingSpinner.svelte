@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Seo } from '$lib/components';
 	import { onMount } from 'svelte';
 
 	let isLoading = true;
@@ -19,8 +18,6 @@
 {:else}
 	<slot />
 {/if}
-
-<Seo />
 
 <style lang="postcss">
 	.loading-div {

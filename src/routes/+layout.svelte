@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '@fontsource-variable/grandstander'; // weights 100-900;
-	import { Header, Footer, ModeToggle, LoadingSpinner } from '$lib/components';
+	import { Header, Footer, ModeToggle } from '$lib/components';
 	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
 
@@ -23,7 +23,6 @@
 
 <ModeWatcher />
 
-<!-- <LoadingSpinner> -->
 <div class="app">
 	<Header />
 	<main>
@@ -31,7 +30,6 @@
 	</main>
 	<Footer />
 </div>
-<!-- </LoadingSpinner> -->
 
 <ModeToggle />
 
