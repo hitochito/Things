@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Seo } from '$lib/components';
 	import { onMount } from 'svelte';
 
 	let isLoading = true;
@@ -19,12 +20,14 @@
 	<slot />
 {/if}
 
+<Seo />
+
 <style lang="postcss">
 	.loading-div {
-		@apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+		@apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform;
 	}
 	svg {
-		@apply w-14 h-14;
+		@apply h-14 w-14;
 		animation: 1.5s spin ease infinite;
 	}
 
