@@ -23,15 +23,15 @@
 
 <ModeWatcher />
 
-<LoadingSpinner>
-	<div class="app">
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</div>
-</LoadingSpinner>
+<!-- <LoadingSpinner> -->
+<div class="app">
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
+</div>
+<!-- </LoadingSpinner> -->
 
 <ModeToggle />
 
