@@ -13,13 +13,13 @@
 <header>
 	<div class="corner">
 		<a
-			class="flex gap-4 px-0 h-full items-center font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary"
-			href="https://github.com/sveltejs/kit"
+			class="flex h-full items-center gap-4 px-0 text-xs font-bold uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary"
+			href="https://things-beta.vercel.app/"
 			target="_blank"
 			aria-label="Things - Todo App"
 		>
-			<enhanced:img src={appIcon} alt="Things - Todo App Logo" class="w-9 h-9" />
-			<p class="mt-1 hidden md:block text-base">Things</p>
+			<enhanced:img src={appIcon} alt="Things - Todo App Logo" class="h-9 w-9" />
+			<p class="mt-1 hidden text-base md:block">Things</p>
 		</a>
 	</div>
 
@@ -47,13 +47,13 @@
 
 	<div class="corner">
 		<a
-			class="flex anchor gap-4"
-			href="https://github.com/sveltejs/kit"
+			class="anchor flex gap-4"
+			href="https://github.com/hitochito/Things"
 			target="_blank"
 			aria-label="Source Code"
 		>
-			<p class="mt-1 hidden md:block text-base">Source</p>
-			<Iconify class="text-3xl bg-white rounded-full" icon="github" />
+			<p class="mt-1 hidden text-base md:block">Source</p>
+			<Iconify class="rounded-full bg-white text-3xl" icon="github" />
 		</a>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 	}
 
 	.corner a {
-		@apply flex items-center justify-center w-full h-full;
+		@apply flex h-full w-full items-center justify-center;
 	}
 
 	nav {
@@ -76,7 +76,7 @@
 	}
 
 	svg {
-		@apply w-8 h-12 block;
+		@apply block h-12 w-8;
 	}
 
 	path {
@@ -84,7 +84,7 @@
 	}
 
 	ul {
-		@apply relative p-0 m-0 h-12 flex justify-center items-center list-none bg-muted bg-contain;
+		@apply relative m-0 flex h-12 list-none items-center justify-center bg-muted bg-contain p-0;
 	}
 
 	li {
@@ -92,16 +92,16 @@
 	}
 
 	li[aria-current='page']::before {
-		@apply content-[''] w-0 h-0 absolute top-0 left-[calc(50%-6px)] border-[6px] border-solid border-transparent border-t-primary;
+		@apply absolute left-[calc(50%-6px)] top-0 h-0 w-0 border-[6px] border-solid border-transparent border-t-primary content-[''];
 	}
 
 	.anchor {
-		@apply h-full items-center px-2 font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary;
+		@apply h-full items-center px-2 text-xs font-bold uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary;
 	}
 	.anchor-text {
 		@apply hidden md:flex;
 	}
 	.anchor-icon {
-		@apply flex md:hidden text-2xl;
+		@apply flex text-2xl md:hidden;
 	}
 </style>
