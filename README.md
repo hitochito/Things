@@ -36,6 +36,8 @@ VITE_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloudinary Cloud Name>"
 
 ```
 
+If the .env file is not loading even if you have it in the root directory, go to dev tools and right click on reload button and do hard refresh and empty cache. That should fix the issue.
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
