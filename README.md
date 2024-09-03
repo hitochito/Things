@@ -28,6 +28,14 @@ That's it! Enjoy the sweet satisfaction of using yet another todo app that’s s
 3. Make your changes
 4. Submit a pull request
 
+Make sure to create a .env file with the following variables:
+
+```.env
+# Required for Cloudinary Dynamic Image Assets
+VITE_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloudinary Cloud Name>"
+
+```
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
