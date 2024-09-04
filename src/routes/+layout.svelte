@@ -2,6 +2,7 @@
 	import '@fontsource-variable/grandstander'; // weights 100-900;
 	import { Header, Footer, ModeToggle } from '$lib/components';
 	import { ModeWatcher } from 'mode-watcher';
+	import { onMount } from 'svelte';
 	import '../app.css';
 
 	// Progress Loader While Navigating Between Pages
@@ -14,10 +15,31 @@
 		showSpinner: false
 	});
 
+	let { children } = $props();
+
 	$effect(() => {
 		if ($navigating) {
 			NProgress.start();
 		} else NProgress.done();
+	});
+
+	async function detectServiceWorkerUpdate() {
+		const registration = await navigator.serviceWorker.ready;
+		registration.addEventListener('updatefound', () => {
+			const newSw = registration.installing;
+			newSw?.addEventListener('statechange', () => {
+				if (newSw?.state === 'installed') {
+					if (confirm('New Update Available. Load New Version?')) {
+						newSw.postMessage({ type: 'SKIP_WAITING' });
+						window.location.reload();
+					}
+				}
+			});
+		});
+	}
+
+	onMount(() => {
+		detectServiceWorkerUpdate();
 	});
 </script>
 
@@ -26,7 +48,7 @@
 <div class="app">
 	<Header />
 	<main>
-		<slot />
+		{@render children()}
 	</main>
 	<Footer />
 </div>
