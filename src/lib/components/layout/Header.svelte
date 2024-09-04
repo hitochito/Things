@@ -14,7 +14,7 @@
 	<div class="corner">
 		<a
 			class="flex h-full items-center gap-4 px-0 text-xs font-bold uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary"
-			href="https://things-beta.vercel.app/"
+			href="https://things-alpha.vercel.app/"
 			target="_blank"
 			aria-label="Things - Todo App"
 		>
