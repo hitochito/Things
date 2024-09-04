@@ -2,9 +2,9 @@
 	import { images } from '$lib/assets';
 	import { CldOgImage } from 'svelte-cloudinary';
 
-	export let title = 'Things - a To-Do app that lets you pretend you are getting things done.';
+	export let title = 'Things - another To-Do app';
 	export let description =
-		'Discover the ultimate procrastination tool built using Svelte 5 and service workers. As mentioned on Discord, this is a todo list with add, complete, and delete options, plus optional drag-and-drop reordering and offline functionality. Perfect for managing tasks you will never actually do!';
+		'This app is built using Sveltekit. As mentioned on Discord, this is a todo list with add, complete, and delete options, plus optional drag-and-drop reordering and offline functionality.';
 	export let src = images.ogImageThings;
 	export let height = 630;
 	export let width = 1200;

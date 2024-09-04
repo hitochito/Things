@@ -1,6 +1,5 @@
 <script>
 	import { LoadingSpinner } from '$lib/components';
-	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
 <svelte:head>
@@ -14,8 +13,9 @@
 
 		<p>
 			Yes it is. I'm working on a Sveltekit x Pocketbase template (work in progress) and This app is
-			cloned from it. You can find it <a href="https://github.com/hitochito/pocketkit" target="_blank"
-				>Here!</a
+			cloned from it. You can find it <a
+				href="https://github.com/hitochito/pocketkit"
+				target="_blank">Here!</a
 			>
 		</p>
 	</section>
@@ -27,7 +27,7 @@
 	}
 
 	p {
-		@apply text-center mb-4;
+		@apply mb-4 text-center;
 	}
 	p a {
 		@apply font-bold text-primary underline;
