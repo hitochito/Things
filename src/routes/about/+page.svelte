@@ -1,5 +1,6 @@
 <script>
 	import { LoadingSpinner } from '$lib/components';
+	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
 <svelte:head>
@@ -9,24 +10,13 @@
 
 <LoadingSpinner>
 	<section>
-		<h1>About this app</h1>
+		<h1>Is this a template?</h1>
 
 		<p>
-			This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-			following into your command line and following the prompts:
-		</p>
-
-		<pre>npm create svelte@latest</pre>
-
-		<p>
-			The page you're looking at is purely static HTML, with no client-side interactivity needed.
-			Because of that, we don't need to load any JavaScript. Try viewing the page's source, or
-			opening the devtools network panel and reloading.
-		</p>
-
-		<p>
-			The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling.
-			Try using it with JavaScript disabled!
+			Yes it is. I'm working on a Sveltekit x Pocketbase template (work in progress) and This app is
+			cloned from it. You can find it <a href="https://github.com/hitochito/pocketkit" target="_blank"
+				>Here!</a
+			>
 		</p>
 	</section>
 </LoadingSpinner>
@@ -37,14 +27,9 @@
 	}
 
 	p {
-		@apply mb-4;
+		@apply text-center mb-4;
 	}
-
-	a {
-		@apply text-blue-600 hover:underline;
-	}
-
-	pre {
-		@apply mb-4 w-full overflow-x-auto rounded bg-white bg-opacity-45 p-2 text-base text-gray-800 shadow-md;
+	p a {
+		@apply font-bold text-primary underline;
 	}
 </style>
