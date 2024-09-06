@@ -20,9 +20,7 @@
 	});
 
 	$effect(() => {
-		if (todos.length > 0) {
-			localStorage.setItem('todos', JSON.stringify(todos));
-		}
+		localStorage.setItem('todos', JSON.stringify(todos));
 	});
 
 	function addTodo() {
@@ -34,6 +32,9 @@
 
 	function deleteTodo(id: number) {
 		todos = todos.filter((todo) => todo.id !== id);
+		if (todos.length === 0) {
+			localStorage.removeItem('todos');
+		}
 	}
 
 	function updateTodoStatus(id: number, completed: boolean) {
